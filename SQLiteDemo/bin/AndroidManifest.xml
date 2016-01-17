@@ -1,0 +1,41 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="org.yzsoft.sqlitedemo.test"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <!-- 为了方便测试，我直接把上面包位置改成我项目的测试包下 -->
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="15" />
+
+    <application
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+
+        <!--
+  因为我们开发项目的时候，包会比较多，所以最好在下面这个activity的配置（  android:name="org.yzsoft.sqlitedemo.activity.MainActivity" ）这句这里打上完整的    包名.类名 
+  ，虽然可以直接用  .类名，但是这个.类名是建立在
+  <manifest xmlns:android="http://schemas.android.com/apk/res/android"     package="org.yzsoft.sqlitedemo.test" 
+  之上的，用package+.类名也刚好可以组合成完整路径。但是我们保险一点写完整去。 
+        -->
+        <activity
+            android:name="org.yzsoft.sqlitedemo.activity.MainActivity"
+            android:label="@string/title_activity_main" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!-- JUnit要加这句 -->
+        <uses-library android:name="android.test.runner" />
+    </application>
+    <!-- JUnit还要加这段 （android:targetPackage测试类所在包名 ） -->
+    <instrumentation
+        android:name="android.test.InstrumentationTestRunner"
+        android:label="Test Unit Tests"
+        android:targetPackage="org.yzsoft.sqlitedemo.test" >
+    </instrumentation>
+
+</manifest>
