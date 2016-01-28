@@ -3,7 +3,6 @@ package com.example.sharedatastudy;
 import java.io.File;
 import java.util.List;
 
-import android.support.v7.app.ActionBarActivity;
 import android.text.TextUtils;
 import android.app.Activity;
 import android.content.ComponentName;
