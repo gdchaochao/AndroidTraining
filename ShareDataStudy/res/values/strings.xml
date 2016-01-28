@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">ShareDataStudy</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Share</string>
+    
+    <string name="send_to">发送至</string>
+
+</resources>
